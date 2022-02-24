@@ -7,26 +7,26 @@
 		bottom 0
 		z-index 2
 
-		&.--left {
-			left -.75rem
+		// &.--left {
+		// 	left -.75rem
 
-			.diagonal {
-				transform skewX(20deg)
-			}
-		}
+		// 	.diagonal {
+		// 		transform skewX(20deg)
+		// 	}
+		// }
 
-		&.--right {
-			right -.75rem
+		// &.--right {
+		// 	right -.75rem
 
-			.diagonal {
-				transform skewX(-20deg)
-			}
-		}
+		// 	.diagonal {
+		// 		transform skewX(-20deg)
+		// 	}
+		// }
 
 		.diagonal {
 			teamBackground()
-			width 1.5rem
-			height 100%
+		// 	width 1.5rem
+		// 	height 100%
 		}
 	}
 
@@ -45,9 +45,8 @@
 			.flag-wrapper {
 				.flag {
 					teamBackground()
-					flag()
+					// flag()
 					min-height 100%
-					opacity .35
 				}
 			}
 
@@ -57,36 +56,21 @@
 				justify-content space-evenly
 
 				padding 0 2.5rem
-				background rgba(#000, .5)
+				// background rgba(#000, .5)
 				z-index 1
 
 				.flag-icon {
-					max-height 2.5rem
-					filter drop-shadow(0 0 .4rem rgba(#fff, .25))
+					max-height 0rem
+					// filter drop-shadow(0 0 .4rem rgba(#fff, .25))
 				}
 
 				.player-name {
 					flsize(2.5rem, 1)
-
-					padding .85rem 0 .85rem 2rem
+					padding .85rem 0 .85rem 0
 					flex 1
 
 					text-align left
-					text-shadow 0 0 1rem rgba(#000, .75)
-				}
-
-				.round-kills {
-					flsize(2rem, 1)
-					display flex
-					align-items center
-
-					.icon {
-						margin-right .75rem
-
-						svg {
-							height 1.6rem
-						}
-					}
+					// text-shadow 0 0 1rem rgba(#000, .75)
 				}
 			}
 		}
@@ -94,6 +78,8 @@
 
 	.second-row {
 		position relative
+		width calc(100% + 3.05rem)
+		transform translateX(-1.525rem)
 
 		.inner {
 			display flex
@@ -108,7 +94,8 @@
 			}
 
 			.stats {
-				margin-right 4rem
+				margin-right 1rem
+				// opacity: 0
 
 				&.--ct .label {
 					color $ct
@@ -127,7 +114,7 @@
 
 					.number {
 						flsize(2rem, 1)
-						width 3ch
+						width 1ch
 					}
 				}
 			}
@@ -139,13 +126,15 @@
 
 				.bomb {
 					center()
+					// left()
 					width 3rem
 					opacity .6
-					margin-right 1rem
+					margin-right 2rem
 				}
 
 				.grenades {
 					center()
+					// left()
 					width 12rem
 
 					img {
