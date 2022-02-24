@@ -9,8 +9,9 @@ No pre-built binaries or installers (yet), so you'll have to do everything yours
 1. Clone the repository.
 1. Install dependencies: `yarn install`.
 1. Copy `gamestate_integration_drweissbrot_hud.cfg` into your CS:GO `cfg` directory, normally `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`.
-1. Install the font [Quantico](https://fonts.google.com/specimen/Quantico) on your system.
+1. Install the font [Avante Garde](https://fontsgeek.com/fonts/ITC-Avant-Garde-Gothic-LT-Bold) on your system.
 1. Optional: Copy `spec.cfg` into that same directory – or copy the cvars you want to use into your own config.
+1. Optional: Copy `bot.cfg` into that same directory - you should really only do this if you're planning to cast matches between bots, which you arent planning to do so just skip this step.
 1. Run it: `cd` into the directory you cloned this project into, and run `yarn start`. This way, changes you make will be applied immediately.
 1. Start CS:GO, and join a match as Spectator, open a GOTV stream, or start playing back a demo. If you can't see the HUD, check [the troubleshooting tips below](#fullscreen-windowed). Also check the [Usage notes](#usage) below for some more guidance.
 
@@ -48,7 +49,7 @@ This requires that you have AutoHotKey installed and available under `C:\Program
 Note: This will always be set to off when you start this app; if you want to use it, you need to enable it manually every time.
 
 #### Enable Pre and Post Match Animations
-I've built a couple simple intro and outro animations for my specific use case, which include the specific "tournament" name we use, so you'll likely not want to use these. If you think you do want to use them, enable them here – and choose the background video and music files below. These animations will also only work if you set multiple matches on [the `Matches` tab](#matches-tab).
+I've built a couple simple intro and outro animations for my specific use case, which include the specific "tournament" name we use, so you'll likely not want to use these. If you think you do want to use them, enable them here – and choose the background video and music files below. These animations will also only work if you set multiple matches on [the `Matches` tab](#matches-tab). These animations should be able to be edited as they are just `.styl` files, I havent figured out how to do that yet though.
 
 #### Start Post Match Outro and Post Series Outro automatically on match end
 If you have enabled Pre and Post Match Animations, this will start the outro animation automatically as soon as the match ends.
@@ -110,3 +111,5 @@ If the HUD animations aren't running smoothly, the best course of action is prob
 Reducing GPU load in general can help too, e.g. closing or disabling hardware accelleration in Chrome, Discord, Steam, and any other apps that use your GPU.
 
 If that doesn't help, you could try switching to CPU rendering – this may only make it worse though. If you want to try it, you can do this with the `–disable-gpu` parameter, e.g. run `npx electron-forge start – –disable-gpu` in the project directory.
+
+The bomb plant and defuse animations are buggy right now, looking to replace them with newer ones so you'll have to live with them just removing bars instead of interpolating them out for a while.
