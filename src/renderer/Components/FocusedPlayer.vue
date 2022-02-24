@@ -3,16 +3,16 @@
 		<div :class="`life --${side}`">
 			<div class="inner">
 				<div class="health">
-					<img src="../../img/health.svg">
+					<!-- <img src="../../img/health.svg">
 
 					<div class="number">
 						<div v-for="digit in ((player.state.health + '') || '').padStart(3)" class="digit">
 							{{ digit }}
 						</div>
-					</div>
+					</div> -->
 				</div>
 
-				<div class="armor">
+				<!-- <div class="armor">
 					<img v-if="player.state.helmet" src="../../img/armor.svg">
 					<img v-else src="../../img/shield.svg">
 
@@ -21,7 +21,7 @@
 							{{ digit }}
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
@@ -48,11 +48,38 @@
 							{{ player.name }}
 						</div>
 
-						<div v-if="player.state.round_kills" class="round-kills">
+						<!-- <div v-if="player.state.round_kills" class="round-kills">
 							<div :class="`icon --${side}`" v-html="image(require('../../img/elimination.svg'))" />
 							<div class="digit">{{ player.state.round_kills }}</div>
+						</div> -->
+					</div>
+
+					<div :class="`life --${side}`">
+						<div class="inner">
+							<div class="health">
+								<img src="../../img/health.svg">
+
+								<div class="number">
+									<div v-for="digit in ((player.state.health + '') || '').padStart(3)" class="digit">
+										{{ digit }}
+									</div>
+								</div>
+							</div>
+
+							<div class="armor">
+								<!-- <img v-if="player.state.helmet" src="../../img/armor.svg">
+								<img v-else src="../../img/shield.svg">
+
+								<div class="number">
+									<div v-for="digit in ((player.state.armor + '') || '').padStart(3)" class="digit">
+										{{ digit }}
+									</div>
+								</div> -->
+							</div>
 						</div>
 					</div>
+
+
 				</div>
 
 				<div class="diagonal-wrapper --right">
@@ -68,23 +95,31 @@
 				<div class="inner">
 					<div :class="`stats --${side}`">
 						<div class="stat">
-							<div class="label">K</div>
-							<div class="number">{{ player.match_stats.kills }}</div>
+							<div class="label">&nbsp;</div>
+							<div class="number">&nbsp;</div>
+							<!-- <div class="label">K</div> -->
+							<!-- <div class="number">{{ player.match_stats.kills }}</div> -->
 						</div>
 
 						<div class="stat">
-							<div class="label">A</div>
-							<div class="number">{{ player.match_stats.assists }}</div>
+							<div class="label">&nbsp;</div>
+							<div class="number">&nbsp;</div>
+							<!-- <div class="label">A</div>
+							<div class="number">{{ player.match_stats.assists }}</div> -->
 						</div>
 
 						<div class="stat">
-							<div class="label">D</div>
-							<div class="number">{{ player.match_stats.deaths }}</div>
+							<div class="label">&nbsp;</div>
+							<div class="number">&nbsp;</div>
+							<!-- <div class="label">D</div>
+							<div class="number">{{ player.match_stats.deaths }}</div> -->
 						</div>
 
 						<div class="stat">
-							<div class="label">ADR</div>
-							<div class="number">{{ Math.round((adr[player.steamid] || 0)) }}</div>
+							<div class="label">&nbsp;</div>
+							<div class="number">&nbsp;</div>
+							<!-- <div class="label">ADR</div>
+							<div class="number">{{ Math.round((adr[player.steamid] || 0)) }}</div> -->
 						</div>
 					</div>
 
@@ -113,19 +148,19 @@
 		<div :class="[`ammo --${side}`, { '--active': activeWeapon && !['Grenade', 'Knife', 'C4'].includes(activeWeapon.type) }]">
 			<div class="inner">
 				<div class="current">
-					<div class="number">
+					<!-- <div class="number">
 						<div
 							v-for="digit in (activeWeapon && activeWeapon.ammo_clip + '' || '').padStart(3)"
 							:class="{ 'digit': !isNaN(digit) }"
 						>
 							{{ digit }}
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="reserve-wrapper">
 					<div class="reserve">
-						<div class="number">
+						<!-- <div class="number">
 							<div>/</div>
 							<div
 								v-for="digit in (activeWeapon && activeWeapon.ammo_reserve + '' || '')"
@@ -133,7 +168,7 @@
 							>
 								{{ digit }}
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
