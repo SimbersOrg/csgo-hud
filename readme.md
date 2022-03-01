@@ -1,7 +1,7 @@
 # csgo-hud
 This is a custom spectator HUD for Counter-Strike: Global Offensive.
 
-![Screenshot](screenshotb.png)
+![Screenshot](showcase.png)
 
 ## Installing
 No pre-built binaries or installers (yet), so you'll have to do everything yourself.
