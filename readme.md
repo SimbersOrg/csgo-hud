@@ -35,7 +35,7 @@ You can switch through the tabs by using `Alt+1` through `Alt+4` while the confi
 ### Preferences tab
 
 #### Player Photos
-There is currently no toggle for this, to disable it you would have to edit the `focusedplayer.vue` file. To add player photos you should drag the image into the `players` folder located in the `src` folder. THESE IMAGES MUST BE .SVG OR IT WILL NOT WORK. Photo names are currently case sensitive but hopefully not for long.
+There is currently no toggle for this, to disable it you would have to edit the `focusedplayer.vue` file. To add player photos you should drag the image into the `players` folder located in the `img` folder in `src`. THESE IMAGES MUST BE .SVG OR IT WILL NOT WORK. Photo names are currently case sensitive but hopefully not for long.
 
 #### Sort observer slots
 If enabled, the players on the left and right side will be sorted alphabetically. I always find it irritating that players' observer slot (the little numbers, 0 through 9) can change across matches in a series – this prevents that from happening.
