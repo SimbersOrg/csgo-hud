@@ -1,5 +1,9 @@
 <template>
 	<div :class="['focused-player', { '--active': active }]">
+
+		<!-- <div><img src="../../img/shield.svg"></div> -->
+		<!-- <div><img :src="`../../img/${player.name}.svg`"></div> -->
+
 		<div :class="`life --${side}`">
 			<div class="inner">
 				<div class="health">
@@ -26,6 +30,9 @@
 		</div>
 
 		<div class="center">
+			
+			<img class="player-img" :src="require(`../../img/players/${player.name}.svg`)">
+
 			<div class="first-row">
 				<div class="diagonal-wrapper --left">
 					<div :class="`diagonal --${side}`"></div>
@@ -67,6 +74,7 @@
 							</div>
 
 							<div class="armor">
+								<!-- fdsfsd -->
 								<!-- <img v-if="player.state.helmet" src="../../img/armor.svg">
 								<img v-else src="../../img/shield.svg">
 
@@ -148,27 +156,27 @@
 		<div :class="[`ammo --${side}`, { '--active': activeWeapon && !['Grenade', 'Knife', 'C4'].includes(activeWeapon.type) }]">
 			<div class="inner">
 				<div class="current">
-					<!-- <div class="number">
-						<div
+					<div class="number">
+						<!-- <div
 							v-for="digit in (activeWeapon && activeWeapon.ammo_clip + '' || '').padStart(3)"
 							:class="{ 'digit': !isNaN(digit) }"
 						>
 							{{ digit }}
-						</div>
-					</div> -->
+						</div> -->
+					</div>
 				</div>
 
 				<div class="reserve-wrapper">
 					<div class="reserve">
-						<!-- <div class="number">
-							<div>/</div>
+						<div class="number">
+							<!-- <div>/</div>
 							<div
 								v-for="digit in (activeWeapon && activeWeapon.ammo_reserve + '' || '')"
 								:class="{ 'digit': !isNaN(digit) }"
 							>
 								{{ digit }}
-							</div>
-						</div> -->
+							</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
